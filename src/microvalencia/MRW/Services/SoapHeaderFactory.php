@@ -7,7 +7,7 @@ use SoapHeader;
 
 class SoapHeaderFactory
 {
-    const NAMESPACE = 'http://www.mrw.es/';
+    const URLNAMESPACE = 'http://www.mrw.es/';
 
     public static function create(AuthHeader $authHeader)
     {
@@ -18,7 +18,7 @@ class SoapHeaderFactory
             'UserName' => $authHeader->userName,
             'Password' => $authHeader->password,
         ];
-        $soapHeader = new SoapHeader(self::NAMESPACE, 'AuthInfo', $auth);
+        $soapHeader = new SoapHeader(self::URLNAMESPACE, 'AuthInfo', $auth);
 
         return $soapHeader;
     }

@@ -1,11 +1,11 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use mcirovalencia\MRW\Client;
-use mcirovalencia\MRW\Entity\AuthHeader;
-use mcirovalencia\MRW\Entity\ServiceData;
-use mcirovalencia\MRW\Entity\ShippingAddress;
-use mcirovalencia\MRW\Entity\ShippingUser;
+use microvalencia\MRW\Client;
+use microvalencia\MRW\Entity\AuthHeader;
+use microvalencia\MRW\Entity\ServiceData;
+use microvalencia\MRW\Entity\ShippingAddress;
+use microvalencia\MRW\Entity\ShippingUser;
 
 class ClientTest extends TestCase
 {
@@ -23,7 +23,7 @@ class ClientTest extends TestCase
 
         $apiClient = new Client($soap, $auth);
 
-        $this->assertInstanceOf('\mcirovalencia\MRW\Client', $apiClient);
+        $this->assertInstanceOf('\microvalencia\MRW\Client', $apiClient);
     }
 
     public function testCanCreateTransaction()
@@ -80,8 +80,8 @@ class ClientTest extends TestCase
 
         $delivery = $apiClient->createTransaction($serviceData, $shippingAddress, $shippingUser);
 
-        $this->assertInstanceOf('\mcirovalencia\MRW\Client', $apiClient);
-        $this->assertInstanceOf('\mcirovalencia\MRW\Entity\Delivery', $delivery);
+        $this->assertInstanceOf('\microvalencia\MRW\Client', $apiClient);
+        $this->assertInstanceOf('\microvalencia\MRW\Entity\Delivery', $delivery);
         $this->assertEquals(1, $delivery->getState());
     }
 
@@ -139,8 +139,8 @@ class ClientTest extends TestCase
 
         $delivery = $apiClient->createTransaction($serviceData, $shippingAddress, $shippingUser);
 
-        $this->assertInstanceOf('\mcirovalencia\MRW\Client', $apiClient);
-        $this->assertInstanceOf('\mcirovalencia\MRW\Entity\Delivery', $delivery);
+        $this->assertInstanceOf('\microvalencia\MRW\Client', $apiClient);
+        $this->assertInstanceOf('\microvalencia\MRW\Entity\Delivery', $delivery);
         $this->assertTrue($delivery->getMessage() == '1) El usuario especificado no dispone de acceso al sistema, consulte con su franquicia.');
         $this->assertTrue($delivery->getState() == 0);
     }
