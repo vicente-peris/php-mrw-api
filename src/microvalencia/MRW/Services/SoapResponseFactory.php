@@ -23,7 +23,7 @@ class SoapResponseFactory
         );
     }
 
-    private static function validateFields($response): bool
+    private static function validateFields($response)
     {
         if (!isset($response->TransmEnvioResult)) {
             return false;

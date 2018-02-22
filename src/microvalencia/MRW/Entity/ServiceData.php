@@ -20,20 +20,20 @@ class ServiceData
     private $notificationsSMS;
 
     public function __construct(
-        string $date,
-        string $reference,
-        string $onFranchise,
-        string $serviceCode,
-        string $serviceDescription,
-        string $items,
-        string $numberOfItems,
-        string $weight,
-        string $saturdayDelivery,
-        string $return,
-        string $refund,
-        string $refundAmount,
-        string $notificationsMail,
-        string $notificationsSMS
+        $date,
+        $reference,
+        $onFranchise,
+        $serviceCode,
+        $serviceDescription,
+        $items,
+        $numberOfItems,
+        $weight,
+        $saturdayDelivery,
+        $return,
+        $refund,
+        $refundAmount,
+        $notificationsMail,
+        $notificationsSMS
     ) {
         $this->date = $date;
         $this->reference = $reference;
@@ -51,72 +51,72 @@ class ServiceData
         $this->notificationsSMS = $notificationsSMS;
     }
 
-    public function getDate(): string
+    public function getDate()
     {
         return $this->date;
     }
 
-    public function getReference(): string
+    public function getReference()
     {
         return $this->reference;
     }
 
-    public function getOnFranchise(): string
+    public function getOnFranchise()
     {
         return $this->onFranchise;
     }
 
-    public function getServiceCode(): string
+    public function getServiceCode()
     {
         return $this->serviceCode;
     }
 
-    public function getServiceDescription(): string
+    public function getServiceDescription()
     {
         return $this->serviceDescription;
     }
 
-    public function getItems(): string
+    public function getItems()
     {
         return $this->items;
     }
 
-    public function getNumberOfItems(): string
+    public function getNumberOfItems()
     {
         return $this->numberOfItems;
     }
 
-    public function getWeight(): string
+    public function getWeight()
     {
         return $this->weight;
     }
 
-    public function getSaturdayDelivery(): string
+    public function getSaturdayDelivery()
     {
         return $this->saturdayDelivery;
     }
 
-    public function getReturn(): string
+    public function getReturn()
     {
         return $this->return;
     }
 
-    public function getRefund(): string
+    public function getRefund()
     {
         return $this->refund;
     }
 
-    public function getRefundAmount(): string
+    public function getRefundAmount()
     {
         return $this->refundAmount;
     }
 
-    public function getNotificationsMail(): string
+    public function getNotificationsMail()
     {
         return $this->notificationsMail;
     }
 
-    public function getNotificationsSMS(): string
+    public function getNotificationsSMS()
     {
         return $this->notificationsSMS;
     }

@@ -4,7 +4,7 @@ namespace microvalencia\MRW\Services;
 
 class SoapTicketRequestFactory
 {
-    public static function create(string $orderId): array
+    public static function create($orderId)
     {
         return [
             'GetEtiquetaEnvio' => [

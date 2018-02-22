@@ -10,7 +10,7 @@ class AuthHeader
     var $userName;
     var $password;
 
-    public function __construct(string $franchise, string $subscriber, string $department, string $user, string $pass)
+    public function __construct($franchise, $subscriber, $department, $user, $pass)
     {
         $this->franchiseCode = $franchise;
         $this->subscriberCode = $subscriber;

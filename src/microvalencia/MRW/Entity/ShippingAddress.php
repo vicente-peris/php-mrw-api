@@ -14,14 +14,14 @@ class ShippingAddress
     private $countryCode;
 
     public function __construct(
-        string $addressCode,
-        string $viaType,
-        string $via,
-        string $number,
-        string $other,
-        string $postalCode,
-        string $city,
-        string $countryCode
+        $addressCode,
+        $viaType,
+        $via,
+        $number,
+        $other,
+        $postalCode,
+        $city,
+        $countryCode
     ) {
         $this->addressCode = $addressCode;
         $this->viaType = $viaType;
@@ -33,42 +33,42 @@ class ShippingAddress
         $this->countryCode = $countryCode;
     }
 
-    public function getAddressCode(): string
+    public function getAddressCode()
     {
         return $this->addressCode;
     }
 
-    public function getViaType(): string
+    public function getViaType()
     {
         return $this->viaType;
     }
 
-    public function getVia(): string
+    public function getVia()
     {
         return $this->via;
     }
 
-    public function getNumber(): string
+    public function getNumber()
     {
         return $this->number;
     }
 
-    public function getOther(): string
+    public function getOther()
     {
         return $this->other;
     }
 
-    public function getPostalCode(): string
+    public function getPostalCode()
     {
         return $this->postalCode;
     }
 
-    public function getCity(): string
+    public function getCity()
     {
         return $this->city;
     }
 
-    public function getCountryCode(): string
+    public function getCountryCode()
     {
         return $this->countryCode;
     }

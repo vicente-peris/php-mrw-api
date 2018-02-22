@@ -10,9 +10,7 @@ class Delivery
     private $shippingNumber;
     private $url;
 
-    public function __construct(
-        string $state, string $message, string $requestNumber, string $shippingNumber, string $url
-    )
+    public function __construct($state, $message, $requestNumber, $shippingNumber, $url)
     {
         $this->state = $state;
         $this->message = $message;
@@ -21,27 +19,27 @@ class Delivery
         $this->url = $url;
     }
 
-    public function getState(): string
+    public function getState()
     {
         return $this->state;
     }
 
-    public function getMessage(): string
+    public function getMessage()
     {
         return $this->message;
     }
 
-    public function getRequestNumber(): string
+    public function getRequestNumber()
     {
         return $this->requestNumber;
     }
 
-    public function getShippingNumber(): string
+    public function getShippingNumber()
     {
         return $this->shippingNumber;
     }
 
-    public function getUrl(): string
+    public function getUrl()
     {
         return $this->url;
     }

@@ -12,12 +12,12 @@ class ShippingUser
     private $observations;
 
     public function __construct(
-        string $nif,
-        string $name,
-        string $telephone,
-        string $contact,
-        string $atentionTo,
-        string $observations
+        $nif,
+        $name,
+        $telephone,
+        $contact,
+        $atentionTo,
+        $observations
     ) {
         $this->nif = $nif;
         $this->name = $name;
@@ -27,32 +27,32 @@ class ShippingUser
         $this->observations = $observations;
     }
 
-    public function getNif(): string
+    public function getNif()
     {
         return $this->nif;
     }
 
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
 
-    public function getTelephone(): string
+    public function getTelephone()
     {
         return $this->telephone;
     }
 
-    public function getContact(): string
+    public function getContact()
     {
         return $this->contact;
     }
 
-    public function getAtentionTo(): string
+    public function getAtentionTo()
     {
         return $this->atentionTo;
     }
 
-    public function getObservations(): string
+    public function getObservations()
     {
         return $this->observations;
     }

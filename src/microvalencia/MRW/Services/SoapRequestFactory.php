@@ -8,7 +8,7 @@ use microvalencia\MRW\Entity\ShippingUser;
 
 class SoapRequestFactory
 {
-    public static function create(ServiceData $data, ShippingAddress $address, ShippingUser $user): array
+    public static function create(ServiceData $data, ShippingAddress $address, ShippingUser $user)
     {
         return [
             'TransmEnvio' => [

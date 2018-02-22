@@ -26,7 +26,7 @@ class Client
         $this->authHeader = $authHeader;
     }
 
-    public function createTransaction(ServiceData $data, ShippingAddress $address, ShippingUser $user): Delivery
+    public function createTransaction(ServiceData $data, ShippingAddress $address, ShippingUser $user)
     {
         $this->client->__setSoapHeaders([SoapHeaderFactory::create($this->authHeader)]);
         $request = SoapRequestFactory::create($data, $address, $user);

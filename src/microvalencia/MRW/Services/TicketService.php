@@ -7,7 +7,7 @@ use microvalencia\MRW\Entity\AuthHeader;
 
 class TicketService
 {
-    public function getTicketUrl(Delivery $delivery, AuthHeader $authHeader): string
+    public function getTicketUrl(Delivery $delivery, AuthHeader $authHeader)
     {
         return $delivery->getUrl()
             . '?Franq=' . $authHeader->franchiseCode
