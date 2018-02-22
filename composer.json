@@ -2,7 +2,7 @@
   "name": "vicente-peris/php-mrw-api",
   "type": "project",
   "description": "Api Client to connect to MRW Services",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "keywords": [
     "Api",
     "Client",
