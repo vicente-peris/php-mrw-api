@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Entity\Delivery;
+use microvalencia\MRW\Entity\Delivery;
 
 class DeliveryTest extends TestCase
 {
@@ -15,7 +15,7 @@ class DeliveryTest extends TestCase
 
         $delivery = new Delivery($state , $message, $requestNumber, $shippingNumber, $url);
 
-        $this->assertInstanceOf('klareNNNs\MRW\Entity\Delivery', $delivery);
+        $this->assertInstanceOf('microvalencia\MRW\Entity\Delivery', $delivery);
         $this->assertEquals($state, $delivery->getState());
         $this->assertEquals($message, $delivery->getMessage());
         $this->assertEquals($requestNumber, $delivery->getRequestNumber());

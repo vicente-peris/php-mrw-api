@@ -1,24 +1,23 @@
 {
-  "name": "klarennns/php-mrw-api",
+  "name": "vicente-peris/php-mrw-api",
   "type": "project",
-  "description": "Api Client to connectto MRW Services",
+  "description": "Api Client to connect to MRW Services",
   "minimum-stability": "dev",
   "keywords": [
     "Api",
     "Client",
     "MRW"
   ],
-  "homepage": "https://github.com/klarennns/php-mrw-api",
+  "homepage": "https://github.com/vicente-peris/php-mrw-api",
   "license": "MIT",
   "authors": [
     {
-      "name": "Albert Claret",
-      "email": "klarensone@gmail.com",
-      "role": "Developer"
+      "name": "MICROVALENCIA - Vicente Peris",
+      "email": "vicente@microvalencia.es"
     }
   ],
   "require": {
-    "php": ">=7.0",
+    "php": ">=5.6",
     "symfony/var-dumper": "^3.4"
   },
   "autoload": {

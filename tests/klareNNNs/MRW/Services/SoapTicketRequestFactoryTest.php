@@ -19,7 +19,7 @@ class SoapTicketRequestFactoryTest extends TestCase
             ]
         ];
 
-        $request = (new \klareNNNs\MRW\Services\SoapTicketRequestFactory())->create($orderId);
+        $request = (new \microvalencia\MRW\Services\SoapTicketRequestFactory())->create($orderId);
 
         $this->assertEquals($requestTest,$request);
     }

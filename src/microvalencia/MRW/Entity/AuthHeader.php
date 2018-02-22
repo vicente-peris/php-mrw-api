@@ -1,6 +1,6 @@
 <?php
 
-namespace klareNNNs\MRW\Entity;
+namespace microvalencia\MRW\Entity;
 
 class AuthHeader
 {

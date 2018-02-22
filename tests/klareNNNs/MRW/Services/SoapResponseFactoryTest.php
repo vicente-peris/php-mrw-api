@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Services\SoapResponseFactory;
+use microvalencia\MRW\Services\SoapResponseFactory;
 
 class SoapResponseFactoryTest extends TestCase
 {
@@ -24,7 +24,7 @@ class SoapResponseFactoryTest extends TestCase
 
         $obj = SoapResponseFactory::create($response);
 
-        $this->assertInstanceOf('klareNNNs\MRW\Entity\Delivery', $obj);
+        $this->assertInstanceOf('microvalencia\MRW\Entity\Delivery', $obj);
     }
 
     /**

@@ -1,14 +1,11 @@
 <?php
 
-
-// $ export FRANCHISE=00620 SUBSCRIBER=017017 USER=SG00620LATOSTADORA PASSWORD=SG00620LATOSTADORA phpunit
-
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Client;
-use klareNNNs\MRW\Entity\AuthHeader;
-use klareNNNs\MRW\Entity\ServiceData;
-use klareNNNs\MRW\Entity\ShippingAddress;
-use klareNNNs\MRW\Entity\ShippingUser;
+use mcirovalencia\MRW\Client;
+use mcirovalencia\MRW\Entity\AuthHeader;
+use mcirovalencia\MRW\Entity\ServiceData;
+use mcirovalencia\MRW\Entity\ShippingAddress;
+use mcirovalencia\MRW\Entity\ShippingUser;
 
 class ClientTest extends TestCase
 {
@@ -26,7 +23,7 @@ class ClientTest extends TestCase
 
         $apiClient = new Client($soap, $auth);
 
-        $this->assertInstanceOf('\klareNNNs\MRW\Client', $apiClient);
+        $this->assertInstanceOf('\mcirovalencia\MRW\Client', $apiClient);
     }
 
     public function testCanCreateTransaction()
@@ -83,8 +80,8 @@ class ClientTest extends TestCase
 
         $delivery = $apiClient->createTransaction($serviceData, $shippingAddress, $shippingUser);
 
-        $this->assertInstanceOf('\klareNNNs\MRW\Client', $apiClient);
-        $this->assertInstanceOf('\klareNNNs\MRW\Entity\Delivery', $delivery);
+        $this->assertInstanceOf('\mcirovalencia\MRW\Client', $apiClient);
+        $this->assertInstanceOf('\mcirovalencia\MRW\Entity\Delivery', $delivery);
         $this->assertEquals(1, $delivery->getState());
     }
 
@@ -142,8 +139,8 @@ class ClientTest extends TestCase
 
         $delivery = $apiClient->createTransaction($serviceData, $shippingAddress, $shippingUser);
 
-        $this->assertInstanceOf('\klareNNNs\MRW\Client', $apiClient);
-        $this->assertInstanceOf('\klareNNNs\MRW\Entity\Delivery', $delivery);
+        $this->assertInstanceOf('\mcirovalencia\MRW\Client', $apiClient);
+        $this->assertInstanceOf('\mcirovalencia\MRW\Entity\Delivery', $delivery);
         $this->assertTrue($delivery->getMessage() == '1) El usuario especificado no dispone de acceso al sistema, consulte con su franquicia.');
         $this->assertTrue($delivery->getState() == 0);
     }

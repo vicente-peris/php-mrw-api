@@ -1,8 +1,8 @@
 <?php
 
-namespace klareNNNs\MRW\Services;
+namespace microvalencia\MRW\Services;
 
-use klareNNNs\MRW\Entity\AuthHeader;
+use microvalencia\MRW\Entity\AuthHeader;
 use SoapHeader;
 
 class SoapHeaderFactory

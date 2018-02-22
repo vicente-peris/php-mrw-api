@@ -1,9 +1,9 @@
 <?php
 
-namespace klareNNNs\MRW\Services;
+namespace microvalencia\MRW\Services;
 
-use klareNNNs\MRW\Entity\Delivery;
-use klareNNNs\MRW\Entity\AuthHeader;
+use microvalencia\MRW\Entity\Delivery;
+use microvalencia\MRW\Entity\AuthHeader;
 
 class TicketService
 {

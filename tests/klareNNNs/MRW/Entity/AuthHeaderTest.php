@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Entity\AuthHeader;
+use microvalencia\MRW\Entity\AuthHeader;
 
 class AuthHeaderTest extends TestCase
 {
@@ -14,7 +14,7 @@ class AuthHeaderTest extends TestCase
         $password = 'owd';
         $auth = new AuthHeader($franchise, $subscriber, $department, $user, $password);
 
-        $this->assertInstanceOf('klareNNNs\MRW\Entity\AuthHeader', $auth);
+        $this->assertInstanceOf('microvalencia\MRW\Entity\AuthHeader', $auth);
         $this->assertEquals($franchise, $auth->franchiseCode);
         $this->assertEquals($subscriber, $auth->subscriberCode);
         $this->assertEquals($department, $auth->departmentCode);

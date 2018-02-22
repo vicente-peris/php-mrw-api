@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Entity\ShippingAddress;
+use microvalencia\MRW\Entity\ShippingAddress;
 
 class ShippingAddressTest extends TestCase
 {
@@ -18,7 +18,7 @@ class ShippingAddressTest extends TestCase
 
         $shippingAddress = new ShippingAddress($addressCode, $viaType, $via, $number, $other, $postalCode, $city, $countryCode);
 
-        $this->assertInstanceOf('klareNNNs\MRW\Entity\ShippingAddress', $shippingAddress);
+        $this->assertInstanceOf('microvalencia\MRW\Entity\ShippingAddress', $shippingAddress);
         $this->assertEquals($addressCode, $shippingAddress->getAddressCode());
         $this->assertEquals($viaType, $shippingAddress->getViaType());
         $this->assertEquals($via, $shippingAddress->getVia());

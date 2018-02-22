@@ -1,10 +1,10 @@
 <?php
 
-namespace klareNNNs\MRW\Services;
+namespace microvalencia\MRW\Services;
 
-use klareNNNs\MRW\Entity\ServiceData;
-use klareNNNs\MRW\Entity\ShippingAddress;
-use klareNNNs\MRW\Entity\ShippingUser;
+use microvalencia\MRW\Entity\ServiceData;
+use microvalencia\MRW\Entity\ShippingAddress;
+use microvalencia\MRW\Entity\ShippingUser;
 
 class SoapRequestFactory
 {

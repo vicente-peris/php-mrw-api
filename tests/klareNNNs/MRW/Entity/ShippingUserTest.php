@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Entity\ShippingUser;
+use microvalencia\MRW\Entity\ShippingUser;
 
 class ShippingUserTest extends TestCase
 {
@@ -15,8 +15,8 @@ class ShippingUserTest extends TestCase
         $observations = '';
 
         $shippingUser = new ShippingUser($nif, $name, $telephone, $contact, $atentionTo, $observations);
-        
-        $this->assertInstanceOf('klareNNNs\MRW\Entity\ShippingUser', $shippingUser);
+
+        $this->assertInstanceOf('microvalencia\MRW\Entity\ShippingUser', $shippingUser);
         $this->assertEquals($nif, $shippingUser->getNif());
         $this->assertEquals($name, $shippingUser->getName());
         $this->assertEquals($telephone, $shippingUser->getTelephone());
@@ -25,5 +25,5 @@ class ShippingUserTest extends TestCase
         $this->assertEquals($observations, $shippingUser->getObservations());
 
     }
-    
+
 }

@@ -1,8 +1,8 @@
 <?php
 
-use klareNNNs\MRW\Entity\AuthHeader;
+use microvalencia\MRW\Entity\AuthHeader;
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Services\SoapHeaderFactory;
+use microvalencia\MRW\Services\SoapHeaderFactory;
 
 class SoapHeaderFactoryTest extends TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-use klareNNNs\MRW\Entity\AuthHeader;
-use klareNNNs\MRW\Entity\Delivery;
+use microvalencia\MRW\Entity\AuthHeader;
+use microvalencia\MRW\Entity\Delivery;
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Services\TicketService;
+use microvalencia\MRW\Services\TicketService;
 
 class TicketServiceTest extends TestCase
 {

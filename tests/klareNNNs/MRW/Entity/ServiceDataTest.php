@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use klareNNNs\MRW\Entity\ServiceData;
+use microvalencia\MRW\Entity\ServiceData;
 
 class ServiceDataTest extends TestCase
 {
@@ -25,7 +25,7 @@ class ServiceDataTest extends TestCase
         $serviceData = new ServiceData($date, $reference, $onFranchise, $serviceCode, $serviceDescription, $items,
             $numberOfItems, $weight, $saturdayDelivery, $return, $refund, $refundAmount, $notificationsMail, $notificationsSMS);
 
-        $this->assertInstanceOf('klareNNNs\MRW\Entity\ServiceData', $serviceData);
+        $this->assertInstanceOf('microvalencia\MRW\Entity\ServiceData', $serviceData);
         $this->assertEquals($date, $serviceData->getDate());
         $this->assertEquals($reference, $serviceData->getReference());
         $this->assertEquals($onFranchise, $serviceData->getOnFranchise());

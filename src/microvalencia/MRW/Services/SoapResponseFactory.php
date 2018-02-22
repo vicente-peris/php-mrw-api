@@ -1,9 +1,9 @@
 <?php
 
-namespace klareNNNs\MRW\Services;
+namespace microvalencia\MRW\Services;
 
 use UnexpectedValueException;
-use klareNNNs\MRW\Entity\Delivery;
+use microvalencia\MRW\Entity\Delivery;
 
 class SoapResponseFactory
 {

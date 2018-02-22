@@ -1,6 +1,6 @@
 <?php
 
-namespace klareNNNs\MRW\Services;
+namespace microvalencia\MRW\Services;
 
 class SoapTicketRequestFactory
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace klareNNNs\MRW;
+namespace microvalencia\MRW;
 
-use klareNNNs\MRW\Entity\AuthHeader;
-use klareNNNs\MRW\Entity\Delivery;
-use klareNNNs\MRW\Entity\ServiceData;
-use klareNNNs\MRW\Entity\ShippingAddress;
-use klareNNNs\MRW\Entity\ShippingUser;
-use klareNNNs\MRW\Services\SoapHeaderFactory;
-use klareNNNs\MRW\Services\SoapRequestFactory;
-use klareNNNs\MRW\Services\SoapResponseFactory;
-use klareNNNs\MRW\Services\SoapTicketRequestFactory;
+use microvalencia\MRW\Entity\AuthHeader;
+use microvalencia\MRW\Entity\Delivery;
+use microvalencia\MRW\Entity\ServiceData;
+use microvalencia\MRW\Entity\ShippingAddress;
+use microvalencia\MRW\Entity\ShippingUser;
+use microvalencia\MRW\Services\SoapHeaderFactory;
+use microvalencia\MRW\Services\SoapRequestFactory;
+use microvalencia\MRW\Services\SoapResponseFactory;
+use microvalencia\MRW\Services\SoapTicketRequestFactory;
 use SoapClient;
 
 class Client
