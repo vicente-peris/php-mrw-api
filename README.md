@@ -2,13 +2,14 @@ PHP MRW API
 ===========
 
 A PHP library for dealing with MRW delivery
-
 PHP Library to Wrap MRW API
+
+Forked from https://github.com/klareNNNs/php-mrw-api
 
 # Installation
 
 ```
-$ composer require klarennns/php-mrw-api
+$ composer require vicente-peris/php-mrw-api
 ```
 
 # Testing And Coverage
