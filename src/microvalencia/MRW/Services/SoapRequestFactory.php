@@ -8,6 +8,7 @@ use microvalencia\MRW\Entity\ShippingUser;
 
 class SoapRequestFactory
 {
+    
     public static function create(ServiceData $data, ShippingAddress $address, ShippingUser $user)
     {
         $request = [
@@ -44,6 +45,8 @@ class SoapRequestFactory
                         'Retorno' => $data->getReturn(),
                         'Reembolso' => $data->getRefund(),
                         'ImporteReembolso' => $data->getRefundAmount(),
+                        'EntregaAPartirDe' => $data->getDeliveryAfter(),
+                        'TramoHorario' => $data->getTimeSlot(),
                         'Notificaciones' => [
                             'NotificacionRequest' =>[]
                         ]
@@ -52,32 +55,33 @@ class SoapRequestFactory
             ]
         ];
 
-				if($data->getNotificationsMail() != ''){
-					$request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
-							'CanalNotificacion' => 'MAIL',
-              'TipoNotificacion' => '2',
-              'MailSMS' => $data->getNotificationsMail(),
-					];
-					$request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
-							'CanalNotificacion' => 'MAIL',
-							'TipoNotificacion' => '4',
-							'MailSMS' => $data->getNotificationsMail(),
-					];
-				}
+        if($data->getNotificationsMail() != ''){
+            $request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
+				'CanalNotificacion' => 'MAIL',
+                'TipoNotificacion' => '2',
+                'MailSMS' => $data->getNotificationsMail(),
+			];
+            $request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
+                    'CanalNotificacion' => 'MAIL',
+                    'TipoNotificacion' => '4',
+                    'MailSMS' => $data->getNotificationsMail(),
+            ];
+		}
 
-				if($data->getNotificationsSMS() != ''){
-					$request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
-							'CanalNotificacion' => 'SMS',
-							'TipoNotificacion' => '2',
-							'MailSMS' => $data->getNotificationsSMS(),
-					];
-					$request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
-							'CanalNotificacion' => 'SMS',
-							'TipoNotificacion' => '4',
-							'MailSMS' => $data->getNotificationsSMS(),
-					];
-				}
+        if($data->getNotificationsSMS() != ''){
+            $request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
+                    'CanalNotificacion' => 'SMS',
+                    'TipoNotificacion' => '2',
+                    'MailSMS' => $data->getNotificationsSMS(),
+            ];
+            $request['TransmEnvio']['request']['DatosServicio']['Notificaciones']['NotificacionRequest'][] = [
+                    'CanalNotificacion' => 'SMS',
+                    'TipoNotificacion' => '4',
+                    'MailSMS' => $data->getNotificationsSMS(),
+            ];
+        }
 
-				return $request;
+        return $request;
     }
+
 }

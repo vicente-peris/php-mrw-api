@@ -19,6 +19,9 @@ class ServiceData
     private $notificationsMail;
     private $notificationsSMS;
 
+    private $deliveryAfter = '';
+    private $timeSlot = '0';
+
     public function __construct(
         $date,
         $reference,
@@ -56,9 +59,17 @@ class ServiceData
         return $this->date;
     }
 
+    public function setDate($value){
+        $this->date = $value;
+    }
+
     public function getReference()
     {
         return $this->reference;
+    }
+
+    public function setReference($value){
+        $this->reference = $value;
     }
 
     public function getOnFranchise()
@@ -66,9 +77,17 @@ class ServiceData
         return $this->onFranchise;
     }
 
+    public function setOnFranchise($value){
+        $this->onFranchise = $value;
+    }
+
     public function getServiceCode()
     {
         return $this->serviceCode;
+    }
+
+    public function setServiceCode($value){
+        $this->serviceCode = $value;
     }
 
     public function getServiceDescription()
@@ -76,9 +95,17 @@ class ServiceData
         return $this->serviceDescription;
     }
 
+    public function setServiceDescription($value){
+        $this->serviceDescription = $value;
+    }
+
     public function getItems()
     {
         return $this->items;
+    }
+
+    public function setItems($value){
+        $this->items = $value;
     }
 
     public function getNumberOfItems()
@@ -86,9 +113,17 @@ class ServiceData
         return $this->numberOfItems;
     }
 
+    public function setNumberOfItems($value){
+        $this->numberOfItems = $value;
+    }
+
     public function getWeight()
     {
         return $this->weight;
+    }
+
+    public function setWeight($value){
+        $this->weight = $value;
     }
 
     public function getSaturdayDelivery()
@@ -96,9 +131,17 @@ class ServiceData
         return $this->saturdayDelivery;
     }
 
+    public function setSaturdayDelivery($value){
+        $this->saturdayDelivery = $value;
+    }
+
     public function getReturn()
     {
         return $this->return;
+    }
+
+    public function setReturn($value){
+        $this->return = $value;
     }
 
     public function getRefund()
@@ -106,9 +149,17 @@ class ServiceData
         return $this->refund;
     }
 
+    public function setRefund($value){
+        $this->refund = $value;
+    }
+
     public function getRefundAmount()
     {
         return $this->refundAmount;
+    }
+
+    public function setRefundAmount($value){
+        $this->refundAmount = $value;
     }
 
     public function getNotificationsMail()
@@ -116,9 +167,35 @@ class ServiceData
         return $this->notificationsMail;
     }
 
+    public function setNotificationsMail($value){
+        $this->notificationsMail = $value;
+    }
+
     public function getNotificationsSMS()
     {
         return $this->notificationsSMS;
+    }
+
+    public function setNotificationsSMS($value){
+        $this->notificationsSMS = $value;
+    }
+
+    public function getDeliveryAfter()
+    {
+        return $this->deliveryAfter;
+    }
+
+    public function setDeliveryAfter($value){
+        $this->deliveryAfter = $value;
+    }
+
+    public function getTimeSlot()
+    {
+        return $this->timeSlot;
+    }
+
+    public function setTimeSlot($value){
+        $this->timeSlot = $value;
     }
 
 }
