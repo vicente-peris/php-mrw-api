@@ -3,7 +3,6 @@
 namespace microvalencia\MRW;
 
 use microvalencia\MRW\Entity\AuthHeader;
-use microvalencia\MRW\Entity\Delivery;
 use microvalencia\MRW\Entity\ServiceData;
 use microvalencia\MRW\Entity\ShippingAddress;
 use microvalencia\MRW\Entity\ShippingUser;
@@ -11,12 +10,15 @@ use microvalencia\MRW\Services\SoapHeaderFactory;
 use microvalencia\MRW\Services\SoapRequestFactory;
 use microvalencia\MRW\Services\SoapResponseFactory;
 use microvalencia\MRW\Services\SoapTicketRequestFactory;
+use microvalencia\MRW\Services\SoapTrackingServicesRequestFactory;
 use SoapClient;
 
 class Client
 {
     const TRANSACTION_METHOD = 'TransmEnvio';
     const TICKET_METHOD = 'EtiquetaEnvio';
+    const TRACKING_METHOD = 'GetEnvios';
+
     private $client;
     private $authHeader;
 
@@ -42,6 +44,15 @@ class Client
         $response = $this->client->__soapCall(self::TICKET_METHOD, $request);
 
         return $response;
+    }
+
+    public function getTrackingService($albaran, $tipoInformacion = 0, $fechaDesde = '', $fechaHasta = ''){
+        
+        $request = SoapTrackingServicesRequestFactory::create($this->authHeader->userName, $this->authHeader->password, 3082, 0, $albaran, '', $fechaDesde, $fechaHasta, $tipoInformacion);
+        $response = $this->client->__soapCall(self::TRACKING_METHOD, $request);
+
+        return $response;
+
     }
 
 }
